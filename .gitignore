@@ -1,0 +1,7 @@
+# Eclipse things
+.settings
+.cproject
+.project
+
+# Output of CMake I guess?
+build/
