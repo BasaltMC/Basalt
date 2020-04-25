@@ -1,6 +1,3 @@
-[submodule "extern/repo"]
-	path = extern/repo
-	url = https://github.com/fpagliughi/sockpp.git
 [submodule "extern/sockpp"]
 	path = extern/sockpp
 	url = https://github.com/fpagliughi/sockpp.git

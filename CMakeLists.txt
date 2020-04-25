@@ -7,6 +7,7 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 
+# Resolve and set _WIN32_WINNT to make sockpp compile.
 if(WIN32)
     macro(get_WIN32_WINNT version)
         if(CMAKE_SYSTEM_VERSION)
@@ -29,24 +30,5 @@ if(WIN32)
     get_WIN32_WINNT(ver)
     add_definitions(-D_WIN32_WINNT=${ver})
 endif()
-
-#find_package(Git QUIET)
-#if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
-    # Update submodules as needed
-    option(GIT_SUBMODULE "Check submodules during build" ON)
-    if(GIT_SUBMODULE)
-        message(STATUS "Submodule update")
-        execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --init --recursive
-                WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-                RESULT_VARIABLE GIT_SUBMOD_RESULT)
-        if(NOT GIT_SUBMOD_RESULT EQUAL "0")
-            message(FATAL_ERROR "git submodule update --init failed with ${GIT_SUBMOD_RESULT}, please checkout submodules")
-        else()
-            message(STATUS "> Finished")
-        endif()
-    endif()
-
-    #add_subdirectory(extern)
-#endif()
 
 add_subdirectory(src)
