@@ -1,3 +1,15 @@
 [submodule "extern/sockpp"]
 	path = extern/sockpp
 	url = https://github.com/fpagliughi/sockpp.git
+[submodule "extern/entt"]
+	path = extern/entt
+	url = https://github.com/skypjack/entt.git
+[submodule "extern/robin-map"]
+	path = extern/robin-map
+	url = https://github.com/Tessil/robin-map.git
+[submodule "extern/spdlog"]
+	path = extern/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "extern/cpp-taskflow"]
+	path = extern/cpp-taskflow
+	url = https://github.com/cpp-taskflow/cpp-taskflow

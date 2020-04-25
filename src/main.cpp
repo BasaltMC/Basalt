@@ -1,8 +1,9 @@
 #include <iostream>
 
 #include <sockpp/tcp_acceptor.h>
-
-//#include <stdio.h>
+#include <entt/entt.hpp>
+#include <rapidjson/allocators.h>
+#include <concurrentqueue/concurrentqueue.h>
 
 void panic(const char* string) {
     printf("Program panicked: \"%s\"\n", string);
@@ -96,6 +97,7 @@ int main() {
 
     printf("Started listening..\n");
 
+    entt::entity e;
 
     while (true) {
         // Accept a new client connection
