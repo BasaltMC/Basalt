@@ -1,6 +1,6 @@
 [submodule "extern/sockpp"]
 	path = extern/sockpp
-	url = https://github.com/fpagliughi/sockpp.git
+	url = https://github.com/fpagliughi/sockpp
 [submodule "extern/entt"]
 	path = extern/entt
 	url = https://github.com/skypjack/entt.git
